@@ -81,6 +81,8 @@ namespace CPUBurner
 
         public void calculatePIAlt(int n)
         {
+            //based on http://stackoverflow.com/a/26697642
+
             var stopwatch = new System.Diagnostics.Stopwatch();
             stopwatch.Start();
 
