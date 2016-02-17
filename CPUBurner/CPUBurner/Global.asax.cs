@@ -12,5 +12,10 @@ namespace CPUBurner
         protected void Application_Start(object sender, EventArgs e)
         {
         }
+
+        public string calculatePI(int n)
+        {
+            return "0";
+        }
     }
 }

@@ -9,9 +9,21 @@ namespace CPUBurner
 {
     public partial class _default : System.Web.UI.Page
     {
+        Label lbl;
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            lbl = new Label();
 
+            calculatePI(1);
+
+            form1.Controls.Clear();
+            form1.Controls.Add(lbl);
+        }
+
+        public void calculatePI(int n)
+        {
+            lbl.Text = "Hello Again";
         }
     }
 }
