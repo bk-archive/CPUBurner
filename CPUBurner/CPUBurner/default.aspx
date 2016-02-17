@@ -8,6 +8,13 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        <div>
+            <asp:Label ID="pi" runat="server"></asp:Label>
+        </div>
+        <hr />
+        <div>
+            <asp:Label ID="pialt" runat="server"></asp:Label>
+        </div>
     </form>
 </body>
 </html>
