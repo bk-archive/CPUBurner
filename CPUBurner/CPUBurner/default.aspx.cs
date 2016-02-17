@@ -9,21 +9,15 @@ namespace CPUBurner
 {
     public partial class _default : System.Web.UI.Page
     {
-        Label lbl;
-        Label lblalt;
+        
         
         protected void Page_Load(object sender, EventArgs e)
         {
-            lbl = new Label();
-            lblalt = new Label();
-
+            pi.Text = "";
+            pialt.Text = "";
             
             calculatePI(10);
             calculatePIAlt(10);
-
-            form1.Controls.Clear();
-            form1.Controls.Add(lbl);
-            form1.Controls.Add(lblalt);
         }
 
         public void calculatePI(int n)
@@ -67,10 +61,10 @@ namespace CPUBurner
             TimeSpan ts = stopwatch.Elapsed;
 
             result = "pie = " + finalDisplayString + "<br>";
-            result += "Accuracy resulting from " + e + "<br>";
+            result += "Accuracy resulting from " + e + " iterations <br>";
             result += "Time to calculate result: " + ts;
 
-            lbl.Text = result;
+            pi.Text = result;
         }
 
         public void calculatePIAlt(int n)
@@ -101,12 +95,11 @@ namespace CPUBurner
             stopwatch.Stop();
             TimeSpan ts = stopwatch.Elapsed;
 
-            
-            resultstring = "<br>pie = " + piNumber + "<br>";
-            resultstring += "Accuracy resulting from " + n + "<br>";
+            resultstring = "pie = " + piNumber + "<br>";
+            resultstring += "Accuracy resulting from " + n + " iteration <br>";
             resultstring += "Time to calculate result: " + ts;
 
-            lblalt.Text = resultstring;
+            pialt.Text = resultstring;
         }
     }
 }
