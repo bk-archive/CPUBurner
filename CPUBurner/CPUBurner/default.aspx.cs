@@ -9,15 +9,27 @@ namespace CPUBurner
 {
     public partial class _default : System.Web.UI.Page
     {
-        
+        int n = 10000;
+        Random r = new Random();
         
         protected void Page_Load(object sender, EventArgs e)
         {
             pi.Text = "";
             pialt.Text = "";
+
+            if (Request.QueryString.Count > 0)
+            {
+                int.TryParse(Request.QueryString["iterations"], out n);
+            }
+            else
+            {
+                n = r.Next(1000, 1000000);
+            }
             
-            calculatePI(10);
-            calculatePIAlt(10);
+            calculatePI(n);
+            calculatePIAlt(n);
+
+            
         }
 
         public void calculatePI(int n)
