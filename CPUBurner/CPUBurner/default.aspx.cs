@@ -23,7 +23,7 @@ namespace CPUBurner
             }
             else
             {
-                n = r.Next(1000, 1000000);
+                n = r.Next(10000, 100000);
             }
             
             calculatePI(n);
